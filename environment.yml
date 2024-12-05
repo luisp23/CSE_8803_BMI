@@ -1,0 +1,24 @@
+name: continual_diffuser
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8.13
+  - pip
+  - pip:
+    - tqdm 
+    - tensorboard
+    - matplotlib
+    - gymnasium
+    - gym==0.12.1
+    - mujoco==2.3.6
+    - mujoco-py==2.1.2.14
+    - PyYAML
+    - metaworld
+    #   - git+https://github.com/Farama-Foundation/Metaworld.git@master#egg=metaworld (maybe need to use this one)
+    # - -e CleanDiffuser
+
+
+# running
+# python main-gene.py --env "cheetah_vel" --data_mode "gene" --actor_type "large" --diffusion_steps 100
+#-e CleanDiffuser is not tested yet
