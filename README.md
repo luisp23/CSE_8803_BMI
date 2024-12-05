@@ -110,9 +110,17 @@ Training critic and evaluation:
 python critic.py --env "cheetah_vel" --data_mode "gene" --actor_type "large" --diffusion_steps 100 --gpu 0
 ```
 
+## Running Continual Diffuser
 
+Training: 
+```bash 
+python train_continual_diffuser.py --env cheetah_vel --data_mode continual_diffuser --trajectory_horizon 4
+```
 
-
+Evaluation:
+```bash 
+python eval_continual_diffuser.py --env cheetah_vel --data_mode continual_diffuser --actor_load_epoch 600 --trajectory_horizon 4 --ending_task 3
+```
 
 ## Debugging 
 - https://github.com/openai/mujoco-py/issues/652
